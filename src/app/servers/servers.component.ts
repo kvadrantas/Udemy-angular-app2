@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-servers',
@@ -6,8 +6,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+  servers = [
+    'Server 1',
+    'Server 2'
+  ]
 
-  constructor() { }
+  allowNewServer = true;
+  newServerAdded = false;
+  serverName = '';
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = false;
+    }, 2000);
+  }
+
+  onAddNewServer() {
+    this.servers.push(this.serverName);
+    this.newServerAdded = true;
+
+    setTimeout(() => {
+      this.newServerAdded = false
+    }, 2000);
+  }
 
   ngOnInit(): void {
   }
