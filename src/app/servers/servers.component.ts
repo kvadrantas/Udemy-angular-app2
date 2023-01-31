@@ -30,6 +30,11 @@ export class ServersComponent implements OnInit {
     }, 2000);
   }
 
+  onServerDelete(index:any) {
+    console.log('istrinta ', index);
+    this.servers.splice(index, 1)
+  }
+
   ngOnInit(): void {
   }
 

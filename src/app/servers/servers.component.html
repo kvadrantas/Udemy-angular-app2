@@ -9,7 +9,7 @@
     [disabled]="allowNewServer">Add server
 </button>
 <div *ngFor="let server of servers; let i=index">
-    <app-server 
+    <app-server (serverDelete)="onServerDelete($event)"
         [serverTitle]="server"
         [ind]="i"
     ></app-server>

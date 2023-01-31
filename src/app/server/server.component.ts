@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-server',
@@ -10,6 +10,8 @@ export class ServerComponent implements OnInit {
 
   @Input() serverTitle: string | undefined;
   @Input() ind: number | undefined;
+
+  @Output() serverDelete = new EventEmitter<number>();
 
   constructor() { 
     this.serverStatus = Math.random() > 0.5? 'Online' : 'Offline';
@@ -28,6 +30,10 @@ export class ServerComponent implements OnInit {
         return 'red'
         break;
     }
+  }
+
+  onDelete() {
+    this.serverDelete.emit(this.ind);
   }
 
   ngOnInit(): void {
