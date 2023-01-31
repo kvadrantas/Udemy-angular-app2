@@ -8,6 +8,9 @@
     (click)="onAddNewServer()" 
     [disabled]="allowNewServer">Add server
 </button>
-<div *ngFor="let server of servers">
-    <app-server [serverTitle]="server"></app-server>
+<div *ngFor="let server of servers; let i=index">
+    <app-server 
+        [serverTitle]="server"
+        [ind]="i"
+    ></app-server>
 </div>

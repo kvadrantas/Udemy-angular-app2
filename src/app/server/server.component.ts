@@ -8,8 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ServerComponent implements OnInit {
   serverStatus = ''
 
-  @Input()
-  serverTitle: string | undefined;
+  @Input() serverTitle: string | undefined;
+  @Input() ind: number | undefined;
 
   constructor() { 
     this.serverStatus = Math.random() > 0.5? 'Online' : 'Offline';
