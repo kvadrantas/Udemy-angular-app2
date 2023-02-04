@@ -7,6 +7,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { LifeCyclesComponent } from './life-cycles/life-cycles.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { RedbgDirective } from './directives/redbg.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DirectivesComponent } from './directives/directives.component';
     ServerComponent,
     ServersComponent,
     LifeCyclesComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    RedbgDirective,
   ],
   imports: [
     BrowserModule,
