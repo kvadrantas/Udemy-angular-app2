@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Directive, ElementRef, HostBinding, HostListener, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[greenBg]'
@@ -11,11 +11,15 @@ export class GreenbgDirective implements OnInit {
   ngOnInit(): void {
   } 
 
+  @HostBinding('style.backgroundColor') bgColor: string = 'transparent'
+
   @HostListener('mouseenter') onMouseover(evt: Event) {
-    this.elRef.nativeElement.style.background = 'yellow'
+    // this.elRef.nativeElement.style.background = 'yellow'
+    this.bgColor = 'yellow'
   }
   
   @HostListener('mouseleave') onMouseleave(evt: Event) {
-    this.elRef.nativeElement.style.background = 'transparent'
+    // this.elRef.nativeElement.style.background = 'transparent'
+    this.bgColor = 'transparent'
   }
 }
