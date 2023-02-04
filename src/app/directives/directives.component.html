@@ -31,3 +31,10 @@
 <p *showOdd="numbers">
     <li></li>
 </p>
+
+<h2>ngSwitch</h2>
+<div [ngSwitch]="10">
+    <p *ngSwitchCase="5">5</p>
+    <p *ngSwitchCase="10">10</p>
+    <p *ngSwitchCase="15">15</p>
+</div>
