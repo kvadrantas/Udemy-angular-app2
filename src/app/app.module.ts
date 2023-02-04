@@ -9,6 +9,7 @@ import { LifeCyclesComponent } from './life-cycles/life-cycles.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { RedbgDirective } from './directives/redbg.directive';
 import { BluebgDirective } from './directives/bluebg.directive';
+import { GreenbgDirective } from './directives/greenbg.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { BluebgDirective } from './directives/bluebg.directive';
     DirectivesComponent,
     RedbgDirective,
     BluebgDirective,
+    GreenbgDirective,
   ],
   imports: [
     BrowserModule,
