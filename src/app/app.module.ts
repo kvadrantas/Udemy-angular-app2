@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { LifeCyclesComponent } from './life-cycles/life-cycles.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
     ServersComponent,
-    LifeCyclesComponent
+    LifeCyclesComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,

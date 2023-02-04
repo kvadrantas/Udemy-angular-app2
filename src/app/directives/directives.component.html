@@ -1,0 +1,26 @@
+<hr>
+<h2>Structular Directives</h2>
+<!-- Structular Directives starts with * and changes DOM structure. *ngFor *ngIf -->
+<div style="display: flex; column-gap: 100px;">
+    <div>
+        <div *ngFor="let number of numbers">
+            <p *ngIf="number % 2 == 0">{{number}}</p>
+        </div>
+    </div>
+    <div>
+        <div *ngFor="let number of numbers">
+            <p *ngIf="number % 2 != 0">{{number}}</p>
+        </div>
+    </div>
+</div>
+
+<hr>
+<h2>Attribute Directives</h2>
+<div *ngFor="let number of numbers">
+    <p 
+        [ngClass]="{greenClass: number % 2 ==0}"
+        [ngStyle]="{color: number % 2 == 0? 'white' : 'red'}"
+    >
+        {{number}}
+    </p>
+</div>
