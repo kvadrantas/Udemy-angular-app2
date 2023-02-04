@@ -10,6 +10,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { RedbgDirective } from './directives/redbg.directive';
 import { BluebgDirective } from './directives/bluebg.directive';
 import { GreenbgDirective } from './directives/greenbg.directive';
+import { ShowOddDirective } from './directives/show-odd.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { GreenbgDirective } from './directives/greenbg.directive';
     RedbgDirective,
     BluebgDirective,
     GreenbgDirective,
+    ShowOddDirective,
   ],
   imports: [
     BrowserModule,
