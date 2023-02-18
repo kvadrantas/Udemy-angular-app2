@@ -12,6 +12,7 @@ import { BluebgDirective } from './directives/bluebg.directive';
 import { GreenbgDirective } from './directives/greenbg.directive';
 import { ShowOddDirective } from './directives/show-odd.directive';
 import { ForPrintInfoServiceComponent } from './services-components/for-print-info-service/for-print-info-service.component';
+import { ForGlobalStorageServiceComponent } from './services-components/for-global-storage-service/for-global-storage-service.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ForPrintInfoServiceComponent } from './services-components/for-print-in
     GreenbgDirective,
     ShowOddDirective,
     ForPrintInfoServiceComponent,
+    ForGlobalStorageServiceComponent,
   ],
   imports: [
     BrowserModule,
