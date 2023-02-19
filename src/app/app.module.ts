@@ -13,7 +13,17 @@ import { GreenbgDirective } from './directives/greenbg.directive';
 import { ShowOddDirective } from './directives/show-odd.directive';
 import { ForPrintInfoServiceComponent } from './services-components/for-print-info-service/for-print-info-service.component';
 import { ForGlobalStorageServiceComponent } from './services-components/for-global-storage-service/for-global-storage-service.component';
+import { RouterModule, Routes } from '@angular/router';
+import { Page1Component } from './routes/page1/page1.component';
+import { Page2Component } from './routes/page2/page2.component';
+import { HomeComponent } from './routes/home/home.component';
 
+// Create Routes
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'page1', component: Page1Component },
+  { path: 'page2', component: Page2Component },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +37,17 @@ import { ForGlobalStorageServiceComponent } from './services-components/for-glob
     ShowOddDirective,
     ForPrintInfoServiceComponent,
     ForGlobalStorageServiceComponent,
+    Page1Component,
+    Page2Component,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    // Register Routes
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

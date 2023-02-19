@@ -1,4 +1,22 @@
 <h1>app root compoennt</h1>
+<!-- Navigation Routes -->
+<button
+  routerLink=""
+  routerLinkActive="active-class"
+  [routerLinkActiveOptions]="{ exact: true }"
+>
+  Home
+</button>
+<!-- / - means that it goes to root path and then adds page1: localhost:4200/page1 -->
+<button routerLink="/page1" routerLinkActive="active-class">Page1</button>
+<button routerLink="/page2" routerLinkActive="active-class">Page2</button>
+
+<!-- Relative path without /. For example if you are on localhost/page1 it will route to localhost/page1/page2 -->
+<button routerLink="./page2">Relative</button>
+<!-- Like in folder navigation you can go 2 or more routes up and then add page2 -->
+<button routerLink="../../page2">Up level</button>
+<router-outlet></router-outlet>
+
 <app-servers></app-servers>
 <app-life-cycles
   #lifeCycleComponent
