@@ -23,6 +23,7 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'page1', component: Page1Component },
   { path: 'page2', component: Page2Component },
+  { path: 'page2/:id/:name', component: Page2Component },
 ];
 @NgModule({
   declarations: [
