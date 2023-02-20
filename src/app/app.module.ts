@@ -35,7 +35,9 @@ const appRoutes: Routes = [
       // { path: ':id/edit', component: EditServerComponent },
     ],
   },
+  // 404 Should be last Route in the list
   { path: 'not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/not-found' },
 ];
 @NgModule({
   declarations: [
