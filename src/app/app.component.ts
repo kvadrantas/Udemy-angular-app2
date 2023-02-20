@@ -21,4 +21,12 @@ export class AppComponent {
     // If you want to use relative path in programatic route
     // this.router.navigate(['/page2'], { relativeTo: this.activatedRoute });
   }
+
+  // Programatic navigation with Query Params
+  navigateOnClick2(id: number) {
+    this.router.navigate(['/page2', id, 'edit'], {
+      queryParams: { allowEdit: '1' },
+      fragment: 'some-anchor',
+    });
+  }
 }

@@ -24,5 +24,18 @@ export class Page2Component implements OnInit {
       this.user.id = params['id'];
       this.user.name = params['name'];
     });
+
+    // http://localhost:4200/page2/5/edit?allowEdit=1#some-anchor
+    console.log('Query params: ', this.activatedRoute.snapshot.queryParams);
+    console.log('Fragment: ', this.activatedRoute.snapshot.fragment);
+
+    // and if Query parameters may change inside same component you need Observable ans subscribe
+    // to see Query param changes
+    this.activatedRoute.queryParams.subscribe((params: Params) => {
+      console.log('Query params (observer): ', params);
+    });
+    this.activatedRoute.fragment.subscribe((fragment: any) => {
+      console.log('Fragment (observer): ', fragment);
+    });
   }
 }

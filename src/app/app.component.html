@@ -10,12 +10,22 @@
 <!-- / - means that it goes to root path and then adds page1: localhost:4200/page1 -->
 <button routerLink="/page1" routerLinkActive="active-class">Page1</button>
 <button routerLink="/page2" routerLinkActive="active-class">Page2</button>
+
 <button
   routerLink="/page2"
   routerLinkActive="active-class"
   (click)="(navigateOnClick)"
 >
   Programatically to Page2
+</button>
+
+<!-- http://localhost:4200/page2/5/edit?allowEdit=1#some-anchor -->
+<button
+  [routerLink]="['/page2', 5, 'edit']"
+  [queryParams]="{ allowEdit: '1' }"
+  fragment="some-anchor"
+>
+  Link with Query Parameters
 </button>
 
 <!-- Relative path without /. For example if you are on localhost/page1 it will route to localhost/page1/page2 -->
