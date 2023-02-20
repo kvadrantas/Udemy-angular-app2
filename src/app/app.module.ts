@@ -18,27 +18,8 @@ import { Page1Component } from './routes/page1/page1.component';
 import { Page2Component } from './routes/page2/page2.component';
 import { HomeComponent } from './routes/home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
 
-// Create Routes
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'page1', component: Page1Component },
-  { path: 'page2', component: Page2Component },
-  { path: 'page2/:id/:name', component: Page2Component },
-
-  // Route with Child/Nested Routes
-  {
-    path: 'servers',
-    component: ServersComponent,
-    children: [
-      // { path: ':id', component: ServerDetails },
-      // { path: ':id/edit', component: EditServerComponent },
-    ],
-  },
-  // 404 Should be last Route in the list
-  { path: 'not-found', component: PageNotFoundComponent },
-  { path: '**', redirectTo: '/not-found' },
-];
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,12 +38,7 @@ const appRoutes: Routes = [
     HomeComponent,
     PageNotFoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    // Register Routes
-    RouterModule.forRoot(appRoutes),
-  ],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
